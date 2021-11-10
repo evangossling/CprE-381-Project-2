@@ -1,0 +1,119 @@
+QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+Start time: 19:40:58 on Nov 06,2021
+vcom -2008 -work internal/ModelSimContainer/work src/*.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity register_10
+-- Compiling architecture structural of register_10
+-- Compiling entity onescomp
+-- Compiling architecture structural of onescomp
+-- Compiling entity andg32
+-- Compiling architecture dataflow of andg32
+-- Compiling entity norg2_32
+-- Compiling architecture dataflow of norg2_32
+-- Compiling entity xorg2
+-- Compiling architecture dataflow of xorg2
+-- Compiling entity xorg2_32
+-- Compiling architecture dataflow of xorg2_32
+-- Compiling entity immExt
+-- Compiling architecture behavior of immExt
+-- Loading package std_logic_textio
+-- Compiling entity tb_ALU_32_bit
+-- Compiling architecture behavior of tb_ALU_32_bit
+-- Compiling entity andg32_3
+-- Compiling architecture dataflow of andg32_3
+-- Compiling entity MIPS_Processor
+-- Compiling architecture structure of MIPS_Processor
+-- Compiling entity dffg_N
+-- Compiling architecture structural of dffg_N
+-- Loading package ENV
+-- Compiling entity tb_control
+-- Compiling architecture mixed of tb_control
+-- Compiling entity mux32t1
+-- Compiling architecture structure of mux32t1
+-- Compiling entity mux4t1_32
+-- Compiling architecture structural of mux4t1_32
+-- Loading package NUMERIC_STD
+-- Compiling entity mem
+-- Compiling architecture rtl of mem
+-- Compiling entity mux2t1_32
+-- Compiling architecture structural of mux2t1_32
+-- Compiling entity Reg_N
+-- Compiling architecture structural of Reg_N
+-- Compiling entity mux2t1
+-- Compiling architecture structure of mux2t1
+-- Compiling entity Zero_Logic
+-- Compiling architecture dataflow of Zero_Logic
+-- Compiling entity sltg2_32
+-- Compiling architecture dataflow of sltg2_32
+-- Compiling entity invg_32
+-- Compiling architecture dataflow of invg_32
+-- Compiling entity mux2t1_N
+-- Compiling architecture structural of mux2t1_N
+-- Compiling entity invg
+-- Compiling architecture dataflow of invg
+-- Compiling entity repl_qb
+-- Compiling architecture dataflow of repl_qb
+-- Compiling entity Adder_Subtractor_N
+-- Compiling architecture structural of Adder_Subtractor_N
+-- Compiling entity xorg32
+-- Compiling architecture dataflow of xorg32
+-- Compiling entity mux4t1
+-- Compiling architecture dataflow of mux4t1
+-- Compiling entity sltg32
+-- Compiling architecture dataflow of sltg32
+-- Compiling entity tb_sltg2_32
+-- Compiling architecture mixed of tb_sltg2_32
+-- Compiling entity norg32
+-- Compiling architecture dataflow of norg32
+-- Compiling entity org2_32
+-- Compiling architecture dataflow of org2_32
+-- Compiling entity invg32
+-- Compiling architecture dataflow of invg32
+-- Compiling entity decoder
+-- Compiling architecture my_decoder of decoder
+-- Compiling entity control
+-- Compiling architecture structural of control
+-- Compiling entity org32
+-- Compiling architecture dataflow of org32
+-- Compiling entity org2
+-- Compiling architecture dataflow of org2
+-- Compiling entity andg2_32
+-- Compiling architecture dataflow of andg2_32
+-- Compiling entity extender_16t32
+-- Compiling architecture dataflow of extender_16t32
+-- Compiling entity dffg
+-- Compiling architecture mixed of dffg
+-- Compiling entity tb
+-- Compiling architecture mixed of tb
+-- Compiling entity mux7t1_32
+-- Compiling architecture dataflow of mux7t1_32
+-- Compiling entity barrel_shifter
+-- Compiling architecture structural of barrel_shifter
+-- Compiling entity tb_Overflow_Logic
+-- Compiling architecture behavior of tb_Overflow_Logic
+-- Compiling entity mux11t1_32
+-- Compiling architecture dataflow of mux11t1_32
+-- Compiling entity reg_file
+-- Compiling architecture structural of reg_file
+-- Compiling package AAA_data
+-- Loading package AAA_data
+-- Compiling entity register32
+-- Compiling architecture structure of register32
+-- Compiling entity Overflow_Logic
+-- Compiling architecture dataflow of Overflow_Logic
+-- Compiling entity tb_barrel_shifter
+-- Compiling architecture mixed of tb_barrel_shifter
+-- Compiling entity ALU_32_bit
+-- Compiling architecture structural of ALU_32_bit
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Adder_N
+-- Compiling architecture behv of Adder_N
+-- Compiling entity mem_mod
+-- Compiling architecture rtl of mem_mod
+-- Compiling entity andg2
+-- Compiling architecture dataflow of andg2
+End time: 19:40:58 on Nov 06,2021, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

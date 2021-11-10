@@ -1,0 +1,251 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Fri Nov  5 19:38:02 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off toolflow -c toolflow
+Info (125068): Revision "toolflow" was previously opened in Quartus II software version 18.0.0 Standard Edition. Created Quartus Prime Default Settings File /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/internal/QuartusWork/toolflow_assignment_defaults.qdf, which contains the default assignment setting information from Quartus II software version 18.0.0 Standard Edition.
+Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file /usr/local/quartus/20.1/quartus/linux64/assignment_defaults.qdf
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd
+    Info (12022): Found design unit 1: ALU_32_bit-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 26
+    Info (12023): Found entity 1: ALU_32_bit File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Adder_N.vhd
+    Info (12022): Found design unit 1: Adder_N-behv File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Adder_N.vhd Line: 34
+    Info (12023): Found entity 1: Adder_N File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Adder_N.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Adder_Subtractor_N.vhd
+    Info (12022): Found design unit 1: Adder_Subtractor_N-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Adder_Subtractor_N.vhd Line: 36
+    Info (12023): Found entity 1: Adder_Subtractor_N File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Adder_Subtractor_N.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd
+    Info (12022): Found design unit 1: MIPS_Processor-structure File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 32
+    Info (12023): Found entity 1: MIPS_Processor File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Overflow_Logic.vhd
+    Info (12022): Found design unit 1: Overflow_Logic-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Overflow_Logic.vhd Line: 26
+    Info (12023): Found entity 1: Overflow_Logic File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Overflow_Logic.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Reg_N.vhd
+    Info (12022): Found design unit 1: Reg_N-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Reg_N.vhd Line: 32
+    Info (12023): Found entity 1: Reg_N File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Reg_N.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Zero_Logic.vhd
+    Info (12022): Found design unit 1: Zero_Logic-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Zero_Logic.vhd Line: 22
+    Info (12023): Found entity 1: Zero_Logic File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Zero_Logic.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg2.vhd
+    Info (12022): Found design unit 1: andg2-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg2.vhd Line: 31
+    Info (12023): Found entity 1: andg2 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg2.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg2_32.vhd
+    Info (12022): Found design unit 1: andg2_32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg2_32.vhd Line: 22
+    Info (12023): Found entity 1: andg2_32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg2_32.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg32.vhd
+    Info (12022): Found design unit 1: andg32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg32.vhd Line: 22
+    Info (12023): Found entity 1: andg32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg32.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg32_3.vhd
+    Info (12022): Found design unit 1: andg32_3-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg32_3.vhd Line: 23
+    Info (12023): Found entity 1: andg32_3 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/andg32_3.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/barrel_shifter.vhd
+    Info (12022): Found design unit 1: barrel_shifter-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/barrel_shifter.vhd Line: 31
+    Info (12023): Found entity 1: barrel_shifter File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/barrel_shifter.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/control.vhd
+    Info (12022): Found design unit 1: control-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/control.vhd Line: 36
+    Info (12023): Found entity 1: control File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/control.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/decoder.vhd
+    Info (12022): Found design unit 1: decoder-my_decoder File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/decoder.vhd Line: 11
+    Info (12023): Found entity 1: decoder File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/decoder.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/dffg.vhd
+    Info (12022): Found design unit 1: dffg-mixed File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/dffg.vhd Line: 33
+    Info (12023): Found entity 1: dffg File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/dffg.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/dffg_N.vhd
+    Info (12022): Found design unit 1: dffg_N-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/dffg_N.vhd Line: 33
+    Info (12023): Found entity 1: dffg_N File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/dffg_N.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/extender_16t32.vhd
+    Info (12022): Found design unit 1: extender_16t32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/extender_16t32.vhd Line: 25
+    Info (12023): Found entity 1: extender_16t32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/extender_16t32.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/immExt.vhd
+    Info (12022): Found design unit 1: immExt-behavior File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/immExt.vhd Line: 12
+    Info (12023): Found entity 1: immExt File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/immExt.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/invg.vhd
+    Info (12022): Found design unit 1: invg-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/invg.vhd Line: 30
+    Info (12023): Found entity 1: invg File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/invg.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/invg32.vhd
+    Info (12022): Found design unit 1: invg32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/invg32.vhd Line: 20
+    Info (12023): Found entity 1: invg32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/invg32.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/invg_32.vhd
+    Info (12022): Found design unit 1: invg_32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/invg_32.vhd Line: 20
+    Info (12023): Found entity 1: invg_32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/invg_32.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mem.vhd
+    Info (12022): Found design unit 1: mem-rtl File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mem.vhd Line: 27
+    Info (12023): Found entity 1: mem File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mem.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mem_mod.vhd
+    Info (12022): Found design unit 1: mem_mod-rtl File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mem_mod.vhd Line: 27
+    Info (12023): Found entity 1: mem_mod File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mem_mod.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux11t1_32.vhd
+    Info (12022): Found design unit 1: mux11t1_32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux11t1_32.vhd Line: 21
+    Info (12023): Found entity 1: mux11t1_32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux11t1_32.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1.vhd
+    Info (12022): Found design unit 1: mux2t1-structure File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1.vhd Line: 34
+    Info (12023): Found entity 1: mux2t1 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1_32.vhd
+    Info (12022): Found design unit 1: mux2t1_32-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1_32.vhd Line: 30
+    Info (12023): Found entity 1: mux2t1_32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1_32.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1_N.vhd
+    Info (12022): Found design unit 1: mux2t1_N-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1_N.vhd Line: 30
+    Info (12023): Found entity 1: mux2t1_N File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1_N.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux32t1.vhd
+    Info (12022): Found design unit 1: mux32t1-structure File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux32t1.vhd Line: 68
+    Info (12023): Found entity 1: mux32t1 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux32t1.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux4t1.vhd
+    Info (12022): Found design unit 1: mux4t1-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux4t1.vhd Line: 36
+    Info (12023): Found entity 1: mux4t1 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux4t1.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux4t1_32.vhd
+    Info (12022): Found design unit 1: mux4t1_32-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux4t1_32.vhd Line: 32
+    Info (12023): Found entity 1: mux4t1_32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux4t1_32.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux7t1_32.vhd
+    Info (12022): Found design unit 1: mux7t1_32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux7t1_32.vhd Line: 23
+    Info (12023): Found entity 1: mux7t1_32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux7t1_32.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/norg2_32.vhd
+    Info (12022): Found design unit 1: norg2_32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/norg2_32.vhd Line: 22
+    Info (12023): Found entity 1: norg2_32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/norg2_32.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/norg32.vhd
+    Info (12022): Found design unit 1: norg32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/norg32.vhd Line: 22
+    Info (12023): Found entity 1: norg32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/norg32.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/onescomp.vhd
+    Info (12022): Found design unit 1: onescomp-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/onescomp.vhd Line: 28
+    Info (12023): Found entity 1: onescomp File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/onescomp.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/org2.vhd
+    Info (12022): Found design unit 1: org2-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/org2.vhd Line: 31
+    Info (12023): Found entity 1: org2 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/org2.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/org2_32.vhd
+    Info (12022): Found design unit 1: org2_32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/org2_32.vhd Line: 22
+    Info (12023): Found entity 1: org2_32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/org2_32.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/org32.vhd
+    Info (12022): Found design unit 1: org32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/org32.vhd Line: 22
+    Info (12023): Found entity 1: org32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/org32.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/reg_file.vhd
+    Info (12022): Found design unit 1: reg_file-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/reg_file.vhd Line: 29
+    Info (12023): Found entity 1: reg_file File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/reg_file.vhd Line: 15
+Info (12021): Found 3 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/register32.vhd
+    Info (12022): Found design unit 1: AAA_data File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/register32.vhd Line: 6
+    Info (12022): Found design unit 2: register32-structure File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/register32.vhd Line: 27
+    Info (12023): Found entity 1: register32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/register32.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/register_10.vhd
+    Info (12022): Found design unit 1: register_10-structural File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/register_10.vhd Line: 22
+    Info (12023): Found entity 1: register_10 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/register_10.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/repl_qb.vhd
+    Info (12022): Found design unit 1: repl_qb-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/repl_qb.vhd Line: 20
+    Info (12023): Found entity 1: repl_qb File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/repl_qb.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd
+    Info (12022): Found design unit 1: sltg2_32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 24
+    Info (12023): Found entity 1: sltg2_32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg32.vhd
+    Info (12022): Found design unit 1: sltg32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg32.vhd Line: 24
+    Info (12023): Found entity 1: sltg32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg32.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb_ALU_32_bit.vhd
+    Info (12022): Found design unit 1: tb_ALU_32_bit-behavior File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb_ALU_32_bit.vhd Line: 23
+    Info (12023): Found entity 1: tb_ALU_32_bit File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb_ALU_32_bit.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb_Overflow_Logic.vhd
+    Info (12022): Found design unit 1: tb_Overflow_Logic-behavior File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb_Overflow_Logic.vhd Line: 22
+    Info (12023): Found entity 1: tb_Overflow_Logic File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb_Overflow_Logic.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb_barrel_shifter.vhd
+    Info (12022): Found design unit 1: tb_barrel_shifter-mixed File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb_barrel_shifter.vhd Line: 23
+    Info (12023): Found entity 1: tb_barrel_shifter File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb_barrel_shifter.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/xorg2.vhd
+    Info (12022): Found design unit 1: xorg2-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/xorg2.vhd Line: 31
+    Info (12023): Found entity 1: xorg2 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/xorg2.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/xorg2_32.vhd
+    Info (12022): Found design unit 1: xorg2_32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/xorg2_32.vhd Line: 22
+    Info (12023): Found entity 1: xorg2_32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/xorg2_32.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/xorg32.vhd
+    Info (12022): Found design unit 1: xorg32-dataflow File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/xorg32.vhd Line: 22
+    Info (12023): Found entity 1: xorg32 File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/xorg32.vhd Line: 13
+Info (12127): Elaborating entity "MIPS_Processor" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at MIPS_Processor.vhd(54): object "s_Halt" assigned a value but never read File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 54
+Warning (10036): Verilog HDL or VHDL warning at MIPS_Processor.vhd(57): object "s_Ovfl" assigned a value but never read File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at MIPS_Processor.vhd(64): object "s_dummy1" assigned a value but never read File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 64
+Warning (10036): Verilog HDL or VHDL warning at MIPS_Processor.vhd(67): object "s_Cout" assigned a value but never read File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 67
+Info (12128): Elaborating entity "mem" for hierarchy "mem:IMem" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 195
+Info (12128): Elaborating entity "mux2t1_N" for hierarchy "mux2t1_N:g_reset_mux" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 213
+Info (12128): Elaborating entity "mux2t1" for hierarchy "mux2t1_N:g_reset_mux|mux2t1:\G_NBit_MUX:0:MUXI" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1_N.vhd Line: 43
+Info (12128): Elaborating entity "invg" for hierarchy "mux2t1_N:g_reset_mux|mux2t1:\G_NBit_MUX:0:MUXI|invg:g_not1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1.vhd Line: 61
+Info (12128): Elaborating entity "andg2" for hierarchy "mux2t1_N:g_reset_mux|mux2t1:\G_NBit_MUX:0:MUXI|andg2:g_and1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1.vhd Line: 65
+Info (12128): Elaborating entity "org2" for hierarchy "mux2t1_N:g_reset_mux|mux2t1:\G_NBit_MUX:0:MUXI|org2:g_or1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux2t1.vhd Line: 75
+Info (12128): Elaborating entity "dffg_N" for hierarchy "dffg_N:g_pc_reg" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 219
+Info (12128): Elaborating entity "dffg" for hierarchy "dffg_N:g_pc_reg|dffg:\G_NBit_DFF:0:DFFI" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/dffg_N.vhd Line: 47
+Info (12128): Elaborating entity "Adder_N" for hierarchy "Adder_N:g_pc_plus_4" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 227
+Info (12128): Elaborating entity "control" for hierarchy "control:control_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 235
+Info (12128): Elaborating entity "mux2t1_N" for hierarchy "control:control_N1|mux2t1_N:g_mux_aluop" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/control.vhd Line: 106
+Info (12128): Elaborating entity "register32" for hierarchy "register32:register32_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 253
+Info (12128): Elaborating entity "decoder" for hierarchy "register32:register32_N1|decoder:g_decoder0" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/register32.vhd Line: 93
+Info (12128): Elaborating entity "mux32t1" for hierarchy "register32:register32_N1|mux32t1:g_mux0" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/register32.vhd Line: 107
+Info (12128): Elaborating entity "extender_16t32" for hierarchy "extender_16t32:extender_16t32_D2_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 268
+Info (12128): Elaborating entity "ALU_32_bit" for hierarchy "ALU_32_bit:ALU_32_bit_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 274
+Warning (10036): Verilog HDL or VHDL warning at ALU_32_bit.vhd(143): object "s_0" assigned a value but never read File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 143
+Info (12128): Elaborating entity "Adder_Subtractor_N" for hierarchy "ALU_32_bit:ALU_32_bit_N1|Adder_Subtractor_N:g_Adder_Subtractor_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 154
+Info (12128): Elaborating entity "onescomp" for hierarchy "ALU_32_bit:ALU_32_bit_N1|Adder_Subtractor_N:g_Adder_Subtractor_N1|onescomp:g_ones_complementor_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Adder_Subtractor_N.vhd Line: 69
+Info (12128): Elaborating entity "barrel_shifter" for hierarchy "ALU_32_bit:ALU_32_bit_N1|barrel_shifter:g_barrel_shifter_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 166
+Info (12128): Elaborating entity "andg2_32" for hierarchy "ALU_32_bit:ALU_32_bit_N1|andg2_32:g_andg2_32_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 183
+Info (12128): Elaborating entity "org2_32" for hierarchy "ALU_32_bit:ALU_32_bit_N1|org2_32:g_org2_32_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 189
+Info (12128): Elaborating entity "xorg2_32" for hierarchy "ALU_32_bit:ALU_32_bit_N1|xorg2_32:g_xorg2_32_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 197
+Info (12128): Elaborating entity "norg2_32" for hierarchy "ALU_32_bit:ALU_32_bit_N1|norg2_32:g_norg2_32_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 203
+Info (12128): Elaborating entity "sltg2_32" for hierarchy "ALU_32_bit:ALU_32_bit_N1|sltg2_32:g_sltg2_32_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 212
+Warning (10631): VHDL Process Statement warning at sltg2_32.vhd(73): inferring latch(es) for signal or variable "o_F", which holds its previous value in one or more paths through the process File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[0]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[1]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[2]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[3]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[4]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[5]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[6]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[7]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[8]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[9]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[10]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[11]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[12]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[13]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[14]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[15]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[16]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[17]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[18]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[19]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[20]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[21]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[22]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[23]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[24]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[25]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[26]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[27]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[28]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[29]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[30]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (10041): Inferred latch for "o_F[31]" at sltg2_32.vhd(73) File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/sltg2_32.vhd Line: 73
+Info (12128): Elaborating entity "repl_qb" for hierarchy "ALU_32_bit:ALU_32_bit_N1|repl_qb:g_repl_qb_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 226
+Info (12128): Elaborating entity "Overflow_Logic" for hierarchy "ALU_32_bit:ALU_32_bit_N1|Overflow_Logic:g_Overflow_Logic_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 240
+Warning (10492): VHDL Process Statement warning at Overflow_Logic.vhd(51): signal "s_Xorcheck" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/Overflow_Logic.vhd Line: 51
+Info (12128): Elaborating entity "mux7t1_32" for hierarchy "ALU_32_bit:ALU_32_bit_N1|mux7t1_32:g_mux7t1_32_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 257
+Info (12128): Elaborating entity "Zero_Logic" for hierarchy "ALU_32_bit:ALU_32_bit_N1|Zero_Logic:g_Zero_Logic_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/ALU_32_bit.vhd Line: 286
+Info (12128): Elaborating entity "mux4t1_32" for hierarchy "mux4t1_32:mux4t1_32_N1" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 295
+Info (12128): Elaborating entity "mux4t1" for hierarchy "mux4t1_32:mux4t1_32_N1|mux4t1:\G_NBit_MUX:0:MUXI" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mux4t1_32.vhd Line: 47
+Info (12128): Elaborating entity "mux4t1_32" for hierarchy "mux4t1_32:mux4t1_32_N2" File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/MIPS_Processor.vhd Line: 304
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "mem:IMem|ram" is uninferred due to asynchronous read logic File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mem.vhd Line: 35
+    Info (276007): RAM logic "mem:DMem|ram" is uninferred due to asynchronous read logic File: /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/mem.vhd Line: 35
+Warning (276002): Cannot convert all sets of registers into RAM megafunctions when creating nodes; therefore, the resulting number of registers remaining in design can cause longer compilation time or result in insufficient memory to complete Analysis and Synthesis
+Info (286030): Timing-Driven Synthesis is running
+Error (114005): Can't find database file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/internal/QuartusWork/db/toolflow.root_partition.map.reg_db.cdb.wrk
+Error (114005): Can't find database file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/internal/QuartusWork/db/toolflow.root_partition.map.reg_db.cdb.wrk
+Error (114005): Can't find database file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/internal/QuartusWork/db/toolflow.tis_db_list.ddb.wrk
+Error (114005): Can't find database file /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/internal/QuartusWork/db/toolflow.tis_db_list.ddb.wrk

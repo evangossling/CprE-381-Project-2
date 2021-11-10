@@ -1,0 +1,133 @@
+# vsim -c -voptargs="+acc" tb -do "../testpy/modelsim_framework.do" 
+# Start time: 19:40:59 on Nov 06,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb(mixed)#1
+# Loading work.mips_processor(structure)#1
+# Loading ieee.numeric_std(body)
+# Loading work.mem(rtl)#1
+# Loading work.mux2t1_n(structural)#1
+# Loading work.mux2t1(structure)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.dffg_n(structural)#1
+# Loading work.dffg(mixed)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.adder_n(behv)#1
+# Loading work.control(structural)#1
+# Loading work.mux2t1_n(structural)#2
+# Loading work.aaa_data
+# Loading work.register32(structure)#1
+# Loading work.decoder(my_decoder)#1
+# Loading work.mux32t1(structure)#1
+# Loading work.extender_16t32(dataflow)#1
+# Loading work.alu_32_bit(structural)#1
+# Loading work.adder_subtractor_n(structural)#1
+# Loading work.onescomp(structural)#1
+# Loading work.barrel_shifter(structural)#1
+# Loading work.barrel_shifter(structural)#2
+# Loading work.andg2_32(dataflow)#1
+# Loading work.org2_32(dataflow)#1
+# Loading work.xorg2_32(dataflow)#1
+# Loading work.norg2_32(dataflow)#1
+# Loading work.sltg2_32(dataflow)#1
+# Loading work.repl_qb(dataflow)#1
+# Loading work.overflow_logic(dataflow)#1
+# Loading work.mux7t1_32(dataflow)#1
+# Loading work.zero_logic(dataflow)#1
+# Loading work.mux4t1_32(structural)#1
+# Loading work.mux4t1(dataflow)#1
+# Loading work.mux4t1_32(structural)#2
+# do ../testpy/modelsim_framework.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/ALU_32_bit_N1/g_sltg2_32_N1/g_iB_twoscomp
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/ALU_32_bit_N1/g_sltg2_32_N1/g_iB_twoscomp
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/ALU_32_bit_N1/g_sltg2_32_N1/g_iA_twoscomp
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/ALU_32_bit_N1/g_sltg2_32_N1/g_iA_twoscomp
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/ALU_32_bit_N1/g_Adder_Subtractor_N1/g_Adder_N1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/ALU_32_bit_N1/g_Adder_Subtractor_N1/g_Adder_N1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/ALU_32_bit_N1/g_Adder_Subtractor_N1/g_Adder_N1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/ALU_32_bit_N1/g_Adder_Subtractor_N1/g_Adder_N1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/g_pc_plus_4
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/g_pc_plus_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/DMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyMips/IMem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 2  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 2  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 2  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 3  Instance: /tb/MyMips/ALU_32_bit_N1/g_Adder_Subtractor_N1/g_Adder_N1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 3  Instance: /tb/MyMips/ALU_32_bit_N1/g_Adder_Subtractor_N1/g_Adder_N1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 3  Instance: /tb/MyMips/ALU_32_bit_N1/g_Adder_Subtractor_N1/g_Adder_N1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 5  Instance: /tb/MyMips/DMem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 12  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 12  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 12  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 16  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 16  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 16  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 17  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 17  Instance: /tb/MyMips/g_adder_N_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 13  Instance: /tb/MyMips/ALU_32_bit_N1/g_Adder_Subtractor_N1/g_Adder_N1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 13  Instance: /tb/MyMips/ALU_32_bit_N1/g_Adder_Subtractor_N1/g_Adder_N1
+# ** Note: Data structure takes 80009984 bytes of memory
+#          Process time 0.51 seconds
+#          stop
+#    Time: 4740 ns  Iteration: 1  Instance: /tb
+# Break in Process P_DUMP_STATE at /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb.vhd line 146
+# Stopped at /home/evang/CPRE381_Fall/GIT/CprE381/Project 1/cpre-381-toolflow-fall-2021-master/src/tb.vhd line 146
+# End time: 19:41:00 on Nov 06,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 32

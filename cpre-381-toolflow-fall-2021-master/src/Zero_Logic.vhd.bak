@@ -1,0 +1,49 @@
+-------------------------------------------------------------------------
+-- Tom Zaborowski
+-- Department of Electrical and Computer Engineering
+-- Iowa State University
+-------------------------------------------------------------------------
+
+
+-- Zero_Logic.vhd
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity Zero_Logic is
+
+  port(i_D          	: in std_logic_vector(31 downto 0);
+       o_Zero          	: out std_logic);
+
+end Zero_Logic;
+
+
+architecture dataflow of Zero_Logic is 
+
+begin
+
+
+	with i_D select
+		o_Zero <= '1' when "00000000000000000000000000000000",
+		'0' when others;
+
+	--o_Zero <= '1';
+
+	--Nbit_Zero_Logic: for i in 0 to 31 generate
+
+	--Zero_Logic_process: PROCESS (i_D(i))
+	--begin
+
+	
+
+	--if i_D(i) = '1'then
+	--o_Zero <= '0';
+	--end if;
+	
+	--END PROCESS  Zero_Logic_process;
+
+
+	--end generate;
+
+end dataflow;
+

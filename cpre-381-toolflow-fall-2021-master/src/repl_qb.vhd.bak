@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------
+-- Tom Zaborowski
+-- Department of Electrical and Computer Engineering
+-- Iowa State University
+-------------------------------------------------------------------------
+
+
+-- repl_qb.vhd
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity repl_qb is
+  port(
+       i_B          : in std_logic_vector(31 downto 0);
+       o_F 	    : out std_logic_vector(31 downto 0));
+	
+end repl_qb;
+
+architecture dataflow of repl_qb is
+
+
+
+	signal s_byte : std_logic_vector(3 downto 0);
+begin
+
+	G_byte_transfer_N1: for i in 3 downto 0 generate
+	begin		
+		s_byte(i) <= i_B(i);
+	end generate G_byte_transfer_N1;
+	
+	G_zero_transfer_N1: for i in 31 downto 0 generate
+	begin		
+		o_F(i) <= '0';
+	end generate G_zero_transfer_N1;
+
+	First_byte_repl_qb: for i in 3 downto 0 generate
+	begin
+		o_F(i) <= i_B(i);
+	end generate First_byte_repl_qb;
+
+
+	Second_byte_repl_qb: for i in 3 downto 0 generate
+	begin
+		o_F(i+8) <= i_B(i);
+	end generate Second_byte_repl_qb;
+
+
+	Third_byte_repl_qb: for i in 3 downto 0 generate
+	begin
+		o_F(i+16) <= i_B(i);
+	end generate Third_byte_repl_qb;
+
+	Fourth_byte_repl_qb: for i in 3 downto 0 generate
+	begin
+		o_F(i+24) <= i_B(i);
+	end generate Fourth_byte_repl_qb;
+
+
+end dataflow;

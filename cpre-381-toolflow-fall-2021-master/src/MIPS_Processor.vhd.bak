@@ -1,0 +1,287 @@
+-------------------------------------------------------------------------
+-- Tom Zaborowski
+-- Department of Electrical and Computer Engineering
+-- Iowa State University
+-------------------------------------------------------------------------
+
+
+-- MIPS_Processor.vhd
+-------------------------------------------------------------------------
+-- DESCRIPTION: This file contains a skeleton of a MIPS_Processor  
+-- implementation.
+
+-- 01/29/2019 by H3::Design created.
+-------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity MIPS_Processor is
+  generic(N : integer := 32);
+  port(iCLK            : in std_logic;
+       iRST            : in std_logic;
+       iInstLd         : in std_logic;
+       iInstAddr       : in std_logic_vector(N-1 downto 0);
+       iInstExt        : in std_logic_vector(N-1 downto 0);
+       oALUOut         : out std_logic_vector(N-1 downto 0)); -- TODO: Hook this up to the output of the ALU. It is important for synthesis that you have this output that can effectively be impacted by all other components so they are not optimized away.
+
+end  MIPS_Processor;
+
+
+architecture structure of MIPS_Processor is
+
+
+
+
+  -- Required data memory signals
+  signal s_DMemWr       : std_logic; -- TODO: use this signal as the final active high data memory write enable signal
+  signal s_DMemAddr     : std_logic_vector(N-1 downto 0); -- TODO: use this signal as the final data memory address input
+  signal s_DMemData     : std_logic_vector(N-1 downto 0); -- TODO: use this signal as the final data memory data input
+  signal s_DMemOut      : std_logic_vector(N-1 downto 0); -- TODO: use this signal as the data memory output
+ 
+  -- Required register file signals 
+  signal s_RegWr        : std_logic; -- TODO: use this signal as the final active high write enable input to the register file 
+  signal s_RegWrAddr    : std_logic_vector(4 downto 0); -- TODO: use this signal as the final destination register address input
+  signal s_RegWrData    : std_logic_vector(N-1 downto 0); -- TODO: use this signal as the final data memory data input
+
+  -- Required instruction memory signals
+  signal s_IMemAddr     : std_logic_vector(N-1 downto 0); -- Do not assign this signal, assign to s_NextInstAddr instead
+  signal s_NextInstAddr : std_logic_vector(N-1 downto 0); -- TODO: use this signal as your intended final instruction memory address input.
+  signal s_Inst         : std_logic_vector(N-1 downto 0); -- TODO: use this signal as the instruction signal 
+
+  -- Required halt signal -- for simulation
+  signal s_Halt         : std_logic;  -- TODO: this signal indicates to the simulation that intended program execution has completed. (Opcode: 01 0100)
+
+  -- Required overflow signal -- for overflow exception detection
+  signal s_Ovfl         : std_logic;  -- TODO: this signal indicates an overflow exception would have been initiated
+
+
+  signal s_RegDst, s_ALUsrc, s_SignExtend, s_Zero, s_Cout, s_ALUsrcA, s_ALUsrcB 	: std_logic;
+  signal s_Jump, s_Branch, s_MemtoReg : std_logic;
+  signal s_ALUOp	: std_logic_vector(4 downto 0);
+  signal s_ReadData1, s_ReadData2, s_ExtendedVal, s_instruction : std_logic_vector(31 downto 0);
+  signal s_ALUA, s_ALUB 	: std_logic_vector(31 downto 0);
+  signal s_dummy1, s_dummy2, s_dummy3	: std_logic;
+
+
+component control
+      PORT (
+        opcode : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+        funct : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+        RegDst : OUT STD_LOGIC;
+        RegData : OUT STD_LOGIC;
+	    JalReg : OUT STD_LOGIC;
+        Jump : OUT STD_LOGIC;
+	    JumpReg : OUT STD_LOGIC;
+        Branch : OUT STD_LOGIC;
+        MemRead : OUT STD_LOGIC;
+        MemtoReg : OUT STD_LOGIC;
+        ALUOp : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+        MemWrite : OUT STD_LOGIC;
+        ALUsrc : OUT STD_LOGIC;
+        RegWrite : OUT STD_LOGIC;
+        SignExtend : OUT STD_LOGIC;
+		halt : OUT STD_LOGIC;
+    );
+
+end component;
+
+
+component fetch
+    PORT (clk           : IN STD_LOGIC;
+          reset         : IN STD_LOGIC;
+          jump          : IN STD_LOGIC;
+          branch 	: IN STD_LOGIC;
+          branch_offset : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+          zero 	        : IN STD_LOGIC;
+          instr 	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+end component;
+
+
+entity register32 is
+  generic(N : integer := 32);
+  port(i_CK            : in std_logic;		
+       i_reset         : in std_logic;		
+       i_WE            : in std_logic;				--Write Enable
+       i_WR            : in std_logic_vector(4 downto 0);	--Write Register
+       i_RS            : in std_logic_vector(4 downto 0);	--Read Register S
+       i_RT            : in std_logic_vector(4 downto 0);	--Read Register T
+       i_WD            : in std_logic_vector(N-1 downto 0);	--Write Data
+       o_O0            : out std_logic_vector(N-1 downto 0);
+       o_O1            : out std_logic_vector(N-1 downto 0));
+  end register32;
+
+component ALU_32_bit
+   port(i_A		: in std_logic_vector(31 downto 0); -- Read data 1 -> i_A
+	i_B		: in std_logic_vector(31 downto 0); -- ALUSrc MUX -> i_B
+	i_ALUOp		: in std_logic_vector(4 downto 0); -- Control selector: 0000 -> AND, 0001 -> OR, 0010 -> ADD,  0011 -> SUB, 0100 -> stl, 0101 -> XOR, 0110 -> NOR, 0111 -> sra, 1000 -> sll, 1001 -> srl, 1010 -> repl.qb 
+	o_Result	: out std_logic_vector(31 downto 0);
+	o_OF		: out std_logic;
+	o_Cout		: out std_logic;
+	o_Zero		: out std_logic);
+
+end component;
+
+
+
+component extender_16t32
+   port(i_D		: in std_logic_vector(15 downto 0);
+	i_Signed	: in std_logic;
+	o_Q		: out std_logic_vector(31 downto 0));
+
+end component;
+
+
+  component mem is
+    generic(ADDR_WIDTH : integer;
+            DATA_WIDTH : integer);
+    port(
+          clk          : in std_logic;
+          addr         : in std_logic_vector((ADDR_WIDTH-1) downto 0);
+          data         : in std_logic_vector((DATA_WIDTH-1) downto 0);
+          we           : in std_logic := '1';
+          q            : out std_logic_vector((DATA_WIDTH -1) downto 0));
+    end component;
+
+
+
+
+component mux2t1_N 
+  generic(N : integer := 32); -- Generic of type integer for input/output data width. Default value is 32.
+  port(i_S          : in std_logic;
+       i_D0         : in std_logic_vector(N-1 downto 0);
+       i_D1         : in std_logic_vector(N-1 downto 0);
+       o_O          : out std_logic_vector(N-1 downto 0));
+
+end component;
+
+
+begin
+
+  control_N1: control
+    PORT MAP(
+        	opcode 		=> s_Inst(31 downto 26),
+        	funct 		=> s_Inst(5 downto 0),
+        	RegDst 		=> s_RegDst,
+        	RegData 	=> s_dummy1, --??
+	    	JalReg 	 	=> s_dummy2, --??
+        	Jump 		=> s_Jump,
+	    	JumpReg 	=> s_dummy3, --??
+        	Branch  	=> s_Branch,
+        	MemRead 	=> '1', 
+        	MemtoReg 	=> s_MemtoReg,
+        	ALUOp 		=> s_ALUOp,
+        	MemWrite 	=> s_DMemWr, --
+        	ALUsrca 	=> s_ALUsrcA, --??
+        	ALUsrcb 	=> s_ALUsrcB, --??
+        	RegWrite 	=> s_RegWr,
+        	SignExtend 	=> s_SignExtend,
+		halt 		=> s_Halt);
+   
+
+
+  fetch_N1: fetch
+	port MAP(
+       		clk 		=> iCLK,
+        	reset 		=> iRST,
+        	jump 		=> s_Jump,
+        	branch 		=> s_Branch,
+        	branch_offset 	=> s_ExtendedVal,
+        	zero 		=> s_Zero,
+        	instr 		=> s_Inst);
+
+
+
+   register32_N1: register32
+	port MAP(i_CL		=>  iCLK,
+		 i_reset 	=>  iRST,
+		 i_WE		=>  s_RegWr,
+		 i_WR		=>  s_RegWrAddr,
+		 i_RS		=>  s_Inst(25 downto 21),
+		 i_RT		=>  s_Inst(20 downto 16),
+		 i_WD		=>  s_RegWrData,
+		 o_O0		=>  s_ALUA,
+		 o_O1		=>  s_ReadData2);
+
+
+  s_DMemData <= s_ReadData2;
+
+
+     extender_16t32_D2_N1: extender_16t32
+   	port MAP(i_D		=>  s_Inst(15 downto 0),
+		 i_Signed	=>  s_SignExtend,
+		 o_Q		=>  s_ExtendedVal);
+
+
+    ALU_32_bit_N1: ALU_32_bit
+	port MAP(i_A          	=>  s_ALUA,
+       	     	i_B           	=>  s_ALUB,
+             	i_ALUOp      	=>  s_ALUOp,
+             	o_Result	=>  s_DMemAddr,
+             	o_OF		=>  s_Ovfl,
+             	o_Cout	      	=>  s_Cout, 
+             	o_Zero         	=>  s_Zero);
+
+
+oALUOut <= s_DMemAddr;
+
+
+
+ with iInstLd select
+    s_IMemAddr <= s_NextInstAddr when '0',
+      iInstAddr when others;
+
+
+  IMem: mem
+    generic map(ADDR_WIDTH => 10,
+                DATA_WIDTH => N)
+    port map(clk  => iCLK,
+             addr => s_IMemAddr(11 downto 2),
+             data => iInstExt,
+             we   => iInstLd,
+             q    => s_Inst);
+  
+  DMem: mem
+    generic map(ADDR_WIDTH => 10,
+                DATA_WIDTH => N)
+    port map(clk  => iCLK,
+             addr => s_DMemAddr(11 downto 2),
+             data => s_DMemData,
+             we   => s_DMemWr,
+             q    => s_DMemOut);
+
+
+
+
+   mux2t1_N_N1: mux2t1_N -- for write register for reg file *5bit*
+       
+       port MAP(i_S  	=> s_RegDst,        
+       		i_D0    => s_Inst(20 downto 16), 
+       		i_D1    => s_Inst(15 downto 11), 
+       		o_O     => s_RegWrAddr);
+
+
+   mux2t1_N_N2: mux2t1_N -- for B input for ALU *32bit*
+       
+       port MAP(i_S  	=> s_ALUsrcA,        
+       		i_D0    => s_ReadData2, 
+       		i_D1    => s_ExtendedVal, 
+       		o_O     => s_ALUB);
+ 
+
+
+  mux2t1_N_N3: mux2t1_N -- for MemtoReg Mux
+       
+       port MAP(i_S  	=> s_MemtoReg,        
+       		i_D0    => s_DMemAddr, 
+       		i_D1    => s_DMemOut, 
+       		o_O     => s_RegWrData);
+
+
+
+
+
+
+end structure;
+
